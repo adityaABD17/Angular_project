@@ -1,0 +1,28 @@
+<div class="seller-auth">
+    <div class="signup">
+        
+        <form [formGroup]="SellerInfo" class="common-form">
+            <h1>Seller Signup</h1>
+
+            <div class="form-div">
+            <input [class.is-invalid]="SellerInfo.get('Name')?.invalid && SellerInfo.get('Name')?.touched" class="form-input form-control" type="text" placeholder="Enter your name" formControlName="Name">
+            <small [class.d-none]="SellerInfo.get('Name')?.valid || SellerInfo.get('Name')?.untouched" class="small text-danger">Name is required</small>
+            </div>
+
+            <div class="form-div">
+            <input [class.is-invalid]="SellerInfo.get('Password')?.invalid && SellerInfo.get('Password')?.touched" class="form-input form-control" type="password" placeholder="Enter Password" formControlName="Password">
+            <small [class.d-none]="SellerInfo.get('Password')?.valid || SellerInfo.get('Password')?.untouched" class="text-danger margin-left:0px">Length Should be greater than 5</small>
+            </div>
+
+            <div class="form-div">   
+            <input [class.is-invalid]="SellerInfo.get('Email')?.invalid && SellerInfo.get('Email')?.touched" class="form-input form-control" type="email" placeholder="Enter your email" formControlName="Email">
+            <small [class.d-none]="SellerInfo.get('Email')?.valid || SellerInfo.get('Email')?.untouched" class="text-danger">Enter valid email</small>
+            </div>
+
+            <button (click)="submitData()" [disabled]="!SellerInfo.valid"
+            [ngClass]="{'enabled': SellerInfo.valid, 'disabled': !SellerInfo.valid}" 
+            class="form-button form-control" type="submit">SignUp</button>
+        </form>
+    </div>
+
+</div>

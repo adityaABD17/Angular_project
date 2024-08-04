@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family :sans-serif;
+}
+
+.container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.common-form{
+    text-align: center;
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    width: 300px;
+}
+
+.form-input{
+    height: 35px;
+    padding-left: 10px;
+    border:1px solid  orange;
+}
+
+.form-div{
+    margin-bottom: 20px;
+}
+
+.form-button {
+    /* Common button styles */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .form-button.enabled {
+    background-color: #28a745; /* Green for enabled */
+    color: white;
+  }
+  
+
+.form-button.disabled {
+    background-color: #6c757d; /* Gray for disabled */
+    color: white;
+    cursor: not-allowed;
+  }
